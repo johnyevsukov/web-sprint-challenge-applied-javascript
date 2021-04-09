@@ -75,7 +75,16 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+    The Document Object Model is a language neutral programming API (application programming interface). It is an object representation of html elements of a webpage. It acts as a bridge between the content and the Browser. Tree like structure (of nodes) representing content.
 2. What is an event?
+    events are essentially things that happen on web page or javascript's interaction with html. Events can be seen as things such as the webpage loading, the user clicking on the screen, the user scrolling, the user pressing a key, etc.
 3. What is an event listener?
+    An event listener is an idle function that sits and waits to be executed when a certain event occurs on a certain elemment of the page. These are all set when writing the event listener function. for example (assuming you have defined button using a queryselector) you could do button.addEventListener('click', function(event){
+     event.target.color = 'blue'   
+    })
+
+    which would change the button's text color to blue.
 4. Why would we convert a NodeList into an Array?
+    you would want to convert a node list to an array for the sake of being able to use advanced array methods such as .map or .filter. Essentially you would do this for greater manipulation options. 
 5. What is a component?
+    A component is a reusable chunk of code that ties together HTML, CSS, and JavaScript. Components are used to preform DOM surgery and create new elements on the page that are not hard coded in our index.html files. For example you can have a component that creates cards by creating the html for them and then applying classes to them that correspond to our css style sheet. In this way we can quiklcy add new elements to the page. A good example of this is infinite scrolling down on a page. As you reach the bottom of the page, an even listener trips and a component is executed to create more content (like scrolling down your friends list on fb).
